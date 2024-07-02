@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./bff
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mf_drawer
+      - mf_videos
+
+  mf_drawer:
+    build:
+      context: ./mf_drawer
+    ports:
+      - "8001:80"
+
+  mf_videos:
+    build:
+      context: ./mf_videos
+    ports:
+      - "8002:80"
