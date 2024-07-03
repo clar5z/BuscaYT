@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   backend:
@@ -21,3 +21,13 @@ services:
       context: ./mf_videos
     ports:
       - "8002:80"
+
+  frontend:
+    build:
+      context: ./front-end
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+      - mf_drawer
+      - mf_videos

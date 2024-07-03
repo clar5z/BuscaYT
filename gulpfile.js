@@ -7,7 +7,7 @@ function css1() {
         .src("./mf_drawer/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass().on("error", sass.logError))
-        .pipe(sourcemaps.write("./mf_drawer/css"))
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./mf_drawer/css"))
 }
 
@@ -16,7 +16,7 @@ function css2() {
         .src("./mf_videos/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass().on("error", sass.logError))
-        .pipe(sourcemaps.write("./mf_videos/css"))
+        .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("./mf_videos/css"))
 }
 

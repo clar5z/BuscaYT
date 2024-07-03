@@ -2,8 +2,8 @@ FROM node:latest
 
 WORKDIR /app
 
-COPY bff/package*.json ./ 
-COPY bff/server.js ./ 
+COPY package*.json ./
+COPY server.js ./
 
 RUN npm install
 

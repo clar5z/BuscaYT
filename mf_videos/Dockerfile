@@ -2,7 +2,7 @@ FROM nginx:alpine
 
 WORKDIR /usr/share/nginx/html
 
-COPY mf_videos/ .
+COPY . .
 
 EXPOSE 80
 
