@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  backend:
+  bff:
     build:
       context: ./bff
     ports:
@@ -9,25 +9,34 @@ services:
     depends_on:
       - mf_drawer
       - mf_videos
+    environment:
+      - MF_DRAWER_URL=http://mf_drawer:8001
+      - MF_VIDEOS_URL=http://mf_videos:8002
 
   mf_drawer:
     build:
       context: ./mf_drawer
     ports:
       - "8001:80"
+    volumes:
+      - ./mf_drawer:/usr/share/nginx/html
 
   mf_videos:
     build:
       context: ./mf_videos
     ports:
       - "8002:80"
+    volumes:
+      - ./mf_videos:/usr/share/nginx/html
 
-  frontend:
+  front-end:
     build:
       context: ./front-end
     ports:
       - "3001:80"
+    volumes:
+      - ./front-end:/usr/share/nginx/html"
     depends_on:
-      - backend
+      - bff
       - mf_drawer
       - mf_videos

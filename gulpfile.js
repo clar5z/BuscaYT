@@ -20,12 +20,24 @@ function css2() {
         .pipe(gulp.dest("./mf_videos/css"))
 }
 
+function css3() {
+    return gulp
+        .src("./front-end/scss/**/*.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass().on("error", sass.logError))
+        .pipe(sourcemaps.write("./"))
+        .pipe(gulp.dest("./front-end/css"))
+}
+
+
 function watch() {
     gulp.watch("./mf_drawer/scss/**/*.scss", css1);
     gulp.watch("./mf_videos/scss/**/*.scss", css2);
+    gulp.watch("./mf_videos/scss/**/*.scss", css3);
 }
 
 exports.css1 = css1;
 exports.css2 = css2;
+exports.css3 = css3;
 
 exports.default = watch;

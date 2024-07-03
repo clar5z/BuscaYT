@@ -13,12 +13,13 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^9.6.0",
-    "eslint-plugin-jsdoc": "^48.5.0"
-  },
-  "dependencies": {
+    "eslint-plugin-jsdoc": "^48.5.0",
     "gulp": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.77.6"
+  },
+  "dependencies": {
+    
   }
 }
