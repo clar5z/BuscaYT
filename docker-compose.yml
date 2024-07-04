@@ -20,6 +20,7 @@ services:
       - "8001:80"
     volumes:
       - ./mf_drawer:/usr/share/nginx/html
+      - ./mf_drawer/nginx.conf:/etc/nginx/conf.d/default.conf
 
   mf_videos:
     build:
@@ -28,6 +29,7 @@ services:
       - "8002:80"
     volumes:
       - ./mf_videos:/usr/share/nginx/html
+      - ./mf_videos/nginx.conf:/etc/nginx/conf.d/default.conf
 
   front-end:
     build:
@@ -35,7 +37,8 @@ services:
     ports:
       - "3001:80"
     volumes:
-      - ./front-end:/usr/share/nginx/html"
+      - ./front-end:/usr/share/nginx/html
+      - ./front-end/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - bff
       - mf_drawer

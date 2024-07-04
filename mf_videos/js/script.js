@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.querySelector('#mf_videos__input').value.trim();
     const searchContainer = document.querySelector('#mf_videos__videos');
     const favVideosContainer = document.querySelector('#mf_videos__fav__videos');
-    const API_KEY = ' ';
+    const API_KEY = '';
 
     function searchVideos() {
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${encodeURIComponent(searchInput)}&key=${API_KEY}`;
@@ -57,5 +57,26 @@ document.addEventListener("DOMContentLoaded", function() {
         return favorites.some(video => video.videoId === videoId);
     }
 
-    searchButton.addEventListener('click', searchVideos);
+    searchButton.addEventListener('click', searchVideos); 
+
+    function navigate(path) {
+        history.pushState(null, null, path);
+        handleNavigation();
+    }
+
+    function handleNavigation() {
+        const path = window.location.pathname;
+        const homeContent = document.querySelector('#mf_videos__home');
+        const favContent = document.querySelector('#mf_videos__fav');
+        if (path === '/favoritos') {
+            homeContent.classList.remove('active');
+            favContent.classList.add('active');
+        } else {
+            favContent.classList.remove('active');
+            homeContent.classList.add('active');
+        }
+    }
+
+    window.addEventListener('popstate', handleNavigation);
+    handleNavigation();
 });
