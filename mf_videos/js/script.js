@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
     const searchButton = document.querySelector('#mf_videos__button');
     const searchInput = document.querySelector('#mf_videos__input').value.trim();
     const searchContainer = document.querySelector('#mf_videos__videos');
@@ -79,4 +78,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('popstate', handleNavigation);
     handleNavigation();
-});
