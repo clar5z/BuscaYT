@@ -1,25 +1,23 @@
 {
-  "name": "BuscaYT",
-  "version": "1.0.0",
-  "description": "O teste consiste em criar duas aplicações micro-frontend.",
-  "main": "gulpfile.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "start": "docker-compose up --build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^9.6.0",
-    "eslint-plugin-jsdoc": "^48.5.0",
-    "gulp": "^5.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.77.6"
-  },
-  "dependencies": {
-    
-  }
+    "name": "BuscaYT",
+    "version": "1.0.0",
+    "description": "O teste consiste em criar duas aplicações micro-frontend.",
+    "main": "gulpfile.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "start": "docker-compose up --build"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^9.6.0",
+        "eslint-plugin-jsdoc": "^48.5.0",
+        "gulp": "^5.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "sass": "^1.77.6"
+    },
+    "dependencies": {}
 }

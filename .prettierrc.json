@@ -1,10 +1,10 @@
-{ 
-    "tabWidth": 4, 
-    "singleQuote": false, 
-    "trailingComma": "all", 
-    "jsxBracketSameLine": false, 
-    "semi": true, 
-    "whitespace": "preserve", 
-    "printWidth": 1000000, 
-    "bracketSpacing": true 
+{
+    "tabWidth": 4,
+    "singleQuote": false,
+    "trailingComma": "all",
+    "jsxBracketSameLine": false,
+    "semi": true,
+    "whitespace": "preserve",
+    "printWidth": 1000000,
+    "bracketSpacing": true
 }
