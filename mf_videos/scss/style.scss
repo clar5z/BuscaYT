@@ -1,7 +1,5 @@
-.content {
-    display: none;
-}
-
-.active {
-    display: block;
-}
+@import "../../front-end/scss/abstracts/variables";
+@import "../../front-end/scss/abstracts/mixins";
+@import "../../front-end/scss/base/reset";
+@import "../../front-end/scss/base/typography";
+@import "./mf-videos";

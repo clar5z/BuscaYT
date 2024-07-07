@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    grid: 1fr minmax(100vh, auto) / 1fr;
+    @include desktop {
+        grid: minmax(100vh, auto) / minmax(280px, 1fr) 5fr;
+    }
+    #mf_drawer {
+        background-color: $dark-primary;
+    }
+    #mf_videos {
+        background-color: $dark-secondary;
+    }
+}

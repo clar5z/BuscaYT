@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+html {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.2777778rem;
+    color: $light;
+}
+
+h1 {
+    font-size: 1.9444444rem;
+    line-height: 2.5555556rem;
+    word-break: break-all;
+}
+
+h2 {
+    font-size: 1.5555556rem;
+    line-height: 2.5555556rem;
+}
+
+h3 {
+    font-size: 1.2777778rem;
+    line-height: 1.2777778rem;
+}
+
+h4 {
+    font-size: 1rem;
+    line-height: 1.2777778rem;
+}
+
+h5 {
+    font-size: 1rem;
+    line-height: 1.2777778rem;
+}
+
+a {
+    color: $light;
+    text-decoration: none;
+    word-break: break-all;
+}

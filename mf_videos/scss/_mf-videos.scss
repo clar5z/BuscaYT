@@ -1,0 +1,87 @@
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#mf_videos {
+    background-color: $dark-secondary;
+    &__home,
+    &__fav {
+        padding: 60px 24px;
+        @include desktop {
+            padding: 137px 35px 60px 35px;
+        }
+    }
+}
+
+.mf_videos {
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $light;
+        background-color: $light;
+        @include desktop {
+            width: 350px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-radius: 0;
+            outline: none;
+            appearance: none;
+            background-color: transparent;
+            &::placeholder {
+                text-transform: uppercase;
+            }
+        }
+        button {
+            width: 50px;
+            appearance: none;
+            border: 0;
+            background-color: transparent;
+            background-image: url("../img/search-dark.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            text-indent: -9999px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        margin-top: -6px;
+    }
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    &__videos {
+        display: grid;
+        grid: 1fr / 1fr;
+        padding: 20px 0;
+        gap: 10px;
+
+        @include desktop {
+            grid: 1fr / repeat(4, 1fr);
+        }
+
+        .favorite-button {
+            border: 0;
+            border-radius: 0;
+            background-color: transparent;
+            font-size: 25px;
+            color: $accent;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+}

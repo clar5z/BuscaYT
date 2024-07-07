@@ -15,9 +15,9 @@ function css3() {
 }
 
 function watch() {
-    gulp.watch("./mf_drawer/scss/**/*.scss", css1);
-    gulp.watch("./mf_videos/scss/**/*.scss", css2);
-    gulp.watch("./front-end/scss/**/*.scss", css3);
+    gulp.watch("./mf_drawer/scss/**/*.scss", gulp.series(css1, css2, css3));
+    gulp.watch("./mf_videos/scss/**/*.scss", gulp.series(css1, css2, css3));
+    gulp.watch("./front-end/scss/**/*.scss", gulp.series(css1, css2, css3));
 }
 
 exports.css1 = css1;

@@ -1,2 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+html {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+  color: #dddddd;
+}
+
+h1 {
+  font-size: 1.9444444rem;
+  line-height: 2.5555556rem;
+  word-break: break-all;
+}
+
+h2 {
+  font-size: 1.5555556rem;
+  line-height: 2.5555556rem;
+}
+
+h3 {
+  font-size: 1.2777778rem;
+  line-height: 1.2777778rem;
+}
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.2777778rem;
+}
+
+a {
+  color: #dddddd;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.mf_drawer {
+  padding: 60px 24px 80px 24px;
+  background-color: #232327;
+  text-align: center;
+}
+@media (min-width: 950px) {
+  .mf_drawer {
+    padding: 60px 35px 80px 35px;
+  }
+}
+.mf_drawer h1 {
+  margin-bottom: 30px;
+}
+.mf_drawer ul {
+  text-align: left;
+}
+.mf_drawer ul li a {
+  display: block;
+  margin-bottom: 5px;
+  padding: 6px 15px;
+  border: 1px solid #dddddd;
+  text-transform: uppercase;
+}
+@media (min-width: 950px) {
+  .mf_drawer ul li a {
+    margin-bottom: 10px;
+  }
+}
+.mf_drawer ul li a:hover {
+  background-color: #dddddd;
+  color: #232327;
+}
+
+#mf_drawer__videos.active {
+  background-color: #dddddd;
+}
+#mf_drawer__videos.active a {
+  color: #232327;
+}
+#mf_drawer__fav.active {
+  background-color: #dddddd;
+}
+#mf_drawer__fav.active a {
+  color: #232327;
+}
+#mf_drawer__fav__amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 1px;
+  float: right;
+  background-color: #f7cc02;
+  border-radius: 50%;
+  color: #232327;
+  font-size: 15px;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */
