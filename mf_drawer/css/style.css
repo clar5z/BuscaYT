@@ -1,3 +1,4 @@
+/* Desenvolvido por https://clarisseribeiro.dev/ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -188,6 +189,10 @@ a {
   word-break: break-all;
 }
 
+small {
+  font-size: 0.8rem;
+}
+
 .mf_drawer {
   padding: 60px 24px 80px 24px;
   background-color: #232327;
@@ -219,6 +224,10 @@ a {
 .mf_drawer ul li a:hover {
   background-color: #dddddd;
   color: #232327;
+}
+.mf_drawer__copy {
+  display: inline-block;
+  margin-top: 18px;
 }
 
 #mf_drawer__videos.active {
