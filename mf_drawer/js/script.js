@@ -1,6 +1,9 @@
 const favAmount = document.querySelector("#mf_drawer__fav__amount");
+const liFav = document.querySelector("#mf_drawer__fav");
+const liVideos = document.querySelector("#mf_drawer__videos");
 let favoritesCount = 0;
 
+// Initialize favorites count and update DOM
 function updateFavoritesCount() {
     const favoritesString = localStorage.getItem("favorites");
     if (favoritesString) {
@@ -11,17 +14,6 @@ function updateFavoritesCount() {
     }
     favAmount.textContent = favoritesCount.toString();
 }
-
-updateFavoritesCount();
-
-document.addEventListener("click", function (event) {
-    if (event.target.classList.contains("favorite-button")) {
-        updateFavoritesCount();
-    }
-});
-
-const liFav = document.querySelector("#mf_drawer__fav");
-const liVideos = document.querySelector("#mf_drawer__videos");
 
 function updateActiveState() {
     const path = window.location.pathname;
@@ -34,8 +26,16 @@ function updateActiveState() {
     }
 }
 
+updateFavoritesCount();
 updateActiveState();
 
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("favorite-button")) {
+        updateFavoritesCount();
+    }
+});
+
+// Update active state on drawer item click
 liFav.addEventListener("click", function () {
     liFav.classList.add("active");
     liVideos.classList.remove("active");
