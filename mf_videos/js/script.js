@@ -2,11 +2,13 @@ const searchButton = document.querySelector("#mf_videos__button");
 const searchInput = document.querySelector("#mf_videos__input");
 const searchContainer = document.querySelector("#mf_videos__videos");
 const favContainer = document.querySelector("#mf_videos__fav__videos");
+// Enter API KEY here
 const API_KEY = "";
 
 let nextPageToken = "";
 let isFetching = false;
 
+// Search videos from YouTube API
 function searchVideos(pageToken = "") {
     if (isFetching) return;
 
@@ -30,6 +32,7 @@ function displayVideos(videos) {
     });
 }
 
+// Display favorite videos
 function displayFavorites(favorites) {
     favContainer.innerHTML = "";
     favorites.forEach((favorite) => {
@@ -102,6 +105,7 @@ searchInput.addEventListener("keydown", function (event) {
     }
 });
 
+// Navigation functions
 function navigate(path) {
     history.pushState(null, null, path);
     handleNavigation();
